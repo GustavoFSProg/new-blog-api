@@ -14,12 +14,13 @@
     "mongodb": "^5.6.0",
     "nodemon": "^2.0.22",
     "prisma": "^4.15.0",
+    "sucrase": "^3.32.0",
     "ts-node-dev": "^2.0.0",
     "tsc": "^2.0.4",
     "typescript": "^5.0.4"
   },
   "scripts": {
-    "dev": "nodemon --watch 'src/' --exec 'ts-node src/index.ts' -e ts",
+    "dev": "nodemon --watch 'src/' --exec 'ts-node index.ts' -e ts",
     "lint": "eslint src/**/*.ts",
     "build": "sucrase ./src -d ./dist --transforms typescript,imports",
     "start": "node dist/index.js"
