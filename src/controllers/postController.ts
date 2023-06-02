@@ -105,4 +105,22 @@ async function deletePost(req: Request, res: Response) {
   }
 }
 
-export default { getAllPosts, deletePost, RegisterPost, UpdatePost }
+async function selectedPost(req: Request, res: Response) {
+  try {
+
+    const data = await prisma.posts.findFirst({
+      where: { id: req.params.id },
+
+    })
+
+    return res.status(201).send(data)
+
+  } catch (error) {
+
+    return res.status(400).send({ msg: "Error!", error })
+
+  }
+}
+
+
+export default { getAllPosts, deletePost, selectedPost, RegisterPost, UpdatePost }

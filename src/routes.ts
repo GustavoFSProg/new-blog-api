@@ -8,9 +8,9 @@ import postController from './controllers/postController'
 
 const upload = multer(uploadConfig)
 
-
 routes.post('/register', upload.single('image'), postController.RegisterPost)
 routes.get('/get-all-posts', postController.getAllPosts)
+routes.get('/get-post/:id', postController.selectedPost)
 routes.put('/update-post/:id', upload.single('image'), postController.UpdatePost)
 routes.delete('/delete-post/:id', postController.deletePost)
 
