@@ -44,7 +44,7 @@ async function getAllPosts(req: Request, res: Response) {
   try {
     const data = await prisma.posts.findMany()
 
-    return res.status(201).send({ data })
+    return res.status(201).send(data)
 
   } catch (error) {
 
