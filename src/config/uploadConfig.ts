@@ -12,4 +12,5 @@ const uploadConfig = {
   }),
 }
 
+
 export default uploadConfig

@@ -59,3 +59,13 @@ export function verifyToken(token: any) {
 //   const currentUser = await User.findOne({ email })
 //   return currentUser
 // }
+
+
+
+// const upload = multer({
+//   storage: storage,
+//   limits: { fileSize: 40000, files: 10 },//supondo que o máximo seriam 10 arquivos
+//   fileFilter: function(req, file, cb) {
+//   checkFileType(file, cb);
+//   }
+//   }).array('myImage');
